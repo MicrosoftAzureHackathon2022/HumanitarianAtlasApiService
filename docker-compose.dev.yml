@@ -1,6 +1,6 @@
 version: '3'
 
 services:
-  node-app:
-    container_name: node-app-dev
+  humanitarian-api:
+    container_name: humanitarian-api-dev
     command: yarn dev -L

@@ -1,6 +1,6 @@
 version: '3'
 
 services:
-  node-app:
-    container_name: node-app-prod
+  humanitarian-api:
+    container_name: humanitarian-api-prod
     command: yarn start

@@ -1,8 +1,8 @@
 FROM node:alpine
 
-RUN mkdir -p /usr/src/node-app && chown -R node:node /usr/src/node-app
+RUN mkdir -p /usr/src/humanitarian-api && chown -R node:node /usr/src/humanitarian-api
 
-WORKDIR /usr/src/node-app
+WORKDIR /usr/src/humanitarian-api
 
 COPY package.json yarn.lock ./
 

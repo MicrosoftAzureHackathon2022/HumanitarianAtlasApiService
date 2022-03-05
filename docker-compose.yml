@@ -1,19 +1,19 @@
 version: '3'
 
 services:
-  node-app:
+  humanitarian-api:
     build: .
-    image: node-app
+    image: humanitarian-api
     environment:
-      - MONGODB_URL=mongodb://mongodb:27017/node-boilerplate
+      - MONGODB_URL=mongodb://mongodb:27017/humanitarian-db
     ports:
       - '3000:3000'
     depends_on:
       - mongodb
     volumes:
-      - .:/usr/src/node-app
+      - .:/usr/src/humanitarian-api
     networks:
-      - node-network
+      - humanitarian-api-network
 
   mongodb:
     image: mongo:4.2.1-bionic
@@ -22,11 +22,11 @@ services:
     volumes:
       - dbdata:/data/db
     networks:
-      - node-network
+      - humanitarian-api-network
 
 volumes:
   dbdata:
 
 networks:
-  node-network:
+  humanitarian-api-network:
     driver: bridge
